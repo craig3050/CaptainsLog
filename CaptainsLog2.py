@@ -75,7 +75,7 @@ def transcribe_gcs(gcs_uri):
 
     operation = audio_sample.long_running_recognize('en-GB')
 
-    retry_count = 100
+    retry_count = 500
     while retry_count > 0 and not operation.complete:
         retry_count -= 1
         time.sleep(2)
